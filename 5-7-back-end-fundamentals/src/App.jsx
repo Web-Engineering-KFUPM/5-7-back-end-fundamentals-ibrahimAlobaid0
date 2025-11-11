@@ -104,6 +104,7 @@ Back-end ONLY supplies the data.
 */
 import { useEffect, useState } from 'react';
 import './index.css';
+import './App.css';
 
 const API = 'http://localhost:3000/api/students';
 
@@ -121,7 +122,8 @@ export default function App() {
       .finally(() => setLoading(false));
   }, []);
 
-  // POST: send data to the server
+  // POST: send data to the server.
+  //understood
   const addStudent = async (e) => {
     e.preventDefault();
     const res = await fetch(API, {
